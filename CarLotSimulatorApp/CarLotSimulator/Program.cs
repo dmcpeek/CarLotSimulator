@@ -50,7 +50,7 @@ namespace CarLotSimulator
 
             Console.WriteLine();
 
-            //Custom Constructor
+            //Custom Constructor - Custom Cunstructor
             Car myCar3 = new Car(2023, "Bugatti", "Chiron Super Sport 300+", "Vroom-Vroom", "uh, what's the point of a horn if you're going 300+ MPH?", true );
             lot.Cars.Add(myCar3);
 

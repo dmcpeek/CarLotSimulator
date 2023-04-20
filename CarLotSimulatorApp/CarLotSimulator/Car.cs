@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CarLotSimulator
 {
-    internal class Car
+    public class Car
     {
         //Defaullt or empty constructor
         public Car()
