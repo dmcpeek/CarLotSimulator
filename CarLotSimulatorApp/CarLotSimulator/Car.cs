@@ -39,23 +39,13 @@ namespace CarLotSimulator
         public string HonkNoise { get; set; }
         public bool IsDriveable { get; set; }
 
-        public void MakeEngineNoise(string engineNoise)
+        public void MakeEngineNoise()
         {
-            Console.Write($"{engineNoise}");
+            Console.Write(EngineNoise);
         }
-        public void MakeHonkNoise(string honkNoise)
+        public void MakeHonkNoise()
         {
-            Console.Write($"{honkNoise}");
-        }
-
-        public void CanItBeDriven(bool driveIt)
-        {
-            if (driveIt == true)
-            {
-                Console.Write("This car drives like a dream!");
-            }
-            else
-                Console.Write("What was I thinking when I bought it!!!");
+            Console.Write(HonkNoise);
         }
     }
 }

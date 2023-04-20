@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.ConstrainedExecution;
 
 namespace CarLotSimulator
 {
@@ -29,8 +30,14 @@ namespace CarLotSimulator
             myCar1.IsDriveable = false;
             lot.Cars.Add(myCar1);
 
-            Console.Write($"My {myCar1.Year} {myCar1.Make} {myCar1.Model}'s engine goes {myCar1.EngineNoise}");
-            Console.Write($" and the horn sounds like {myCar1.HonkNoise}. It is {myCar1.IsDriveable} that it can be driven.");
+            var engineSound1 = myCar1.EngineNoise;
+            var honk1 = myCar1.HonkNoise;
+            Console.WriteLine($"Year: {myCar1.Year}");
+            Console.WriteLine($"Make: {myCar1.Make}");
+            Console.WriteLine($"Model: {myCar1.Model}");
+            Console.WriteLine($"Engine noise: {engineSound1}");
+            Console.WriteLine($"Horn sound: {honk1}");
+            Console.WriteLine($"Can be driven: {myCar1.IsDriveable}");
             Console.WriteLine();
 
             //Custom Constructor - Object Initializer Syntax
@@ -45,8 +52,15 @@ namespace CarLotSimulator
             };
             lot.Cars.Add(myCar2);
 
-            Console.Write($"My {myCar2.Year} {myCar2.Make} {myCar2.Model}'s engine goes {myCar2.EngineNoise}");
-            Console.Write($" and the horn sounds like {myCar2.HonkNoise}. It is {myCar2.IsDriveable} that it can be driven.");
+            var engineSound2 = myCar2.EngineNoise;
+            var honk2 = myCar2.HonkNoise;
+            Console.WriteLine($"Year: {myCar2.Year}");
+            Console.WriteLine($"Make: {myCar2.Make}");
+            Console.WriteLine($"Model: {myCar2.Model}");
+            Console.WriteLine($"Engine noise: {engineSound2}");
+            Console.WriteLine($"Horn sound: {honk2}");
+            Console.WriteLine($"Can be driven: {myCar2.IsDriveable}");
+            Console.WriteLine();
 
             Console.WriteLine();
 
@@ -54,10 +68,16 @@ namespace CarLotSimulator
             Car myCar3 = new Car(2023, "Bugatti", "Chiron Super Sport 300+", "Vroom-Vroom", "uh, what's the point of a horn if you're going 300+ MPH?", true );
             lot.Cars.Add(myCar3);
 
-            Console.Write($"My {myCar3.Year} {myCar3.Make} {myCar3.Model}'s engine goes {myCar3.EngineNoise}");
-            Console.Write($" and the horn sounds like {myCar3.HonkNoise}. It is {myCar3.IsDriveable} that it can be driven.");
+            var engineSound3 = myCar3.EngineNoise;
+            var honk3 = myCar3.HonkNoise;
+            Console.WriteLine($"Year: {myCar3.Year}");
+            Console.WriteLine($"Make: {myCar3.Make}");
+            Console.WriteLine($"Model: {myCar3.Model}");
+            Console.WriteLine($"Engine noise: {engineSound3}");
+            Console.WriteLine($"Horn sound: {honk3}");
+            Console.WriteLine($"Can be driven: {myCar3.IsDriveable}");
             Console.WriteLine();
-
+            Console.WriteLine();
             //*************BONUS*************//
 
             // Set the properties utilizing the 3 different ways we learned about, one way for each car
@@ -70,9 +90,18 @@ namespace CarLotSimulator
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
 
             Console.WriteLine("Workin' at the car lot");
+
             foreach (var car in lot.Cars)
             {
-                Console.WriteLine($" Year: {car.Year} Make: {car.Make} Model: {car.Model} Engine Noise: {car.EngineNoise} Honk Noise: {car.HonkNoise} Driveable: {car.IsDriveable}");
+                var engineSound = car.EngineNoise;
+                var honk = car.HonkNoise;
+                Console.WriteLine($"Year: {car.Year}");
+                Console.WriteLine($"Make: {car.Make}");
+                Console.WriteLine($"Model: {car.Model}");
+                Console.WriteLine($"Engine noise: {engineSound}");
+                Console.WriteLine($"Horn sound: {honk}");
+                Console.WriteLine($"Can be driven: {car.IsDriveable}");
+                Console.WriteLine();
             }
         }
     }
