@@ -22,6 +22,7 @@ namespace CarLotSimulator
 
             //Default Constructor - Object Dot Notation
             Car myCar1 = new Car();
+
             myCar1.Year = 1955;
             myCar1.Make = "BMW";
             myCar1.Model = "Isetta";
@@ -32,12 +33,14 @@ namespace CarLotSimulator
 
             var engineSound1 = myCar1.EngineNoise;
             var honk1 = myCar1.HonkNoise;
+            Console.WriteLine($"Number of cars: {CarLot.numberOfCars}");
             Console.WriteLine($"Year: {myCar1.Year}");
             Console.WriteLine($"Make: {myCar1.Make}");
             Console.WriteLine($"Model: {myCar1.Model}");
             Console.WriteLine($"Engine noise: {engineSound1}");
             Console.WriteLine($"Horn sound: {honk1}");
             Console.WriteLine($"Can be driven: {myCar1.IsDriveable}");
+            Console.WriteLine();
             Console.WriteLine();
 
             //Custom Constructor - Object Initializer Syntax
@@ -54,6 +57,7 @@ namespace CarLotSimulator
 
             var engineSound2 = myCar2.EngineNoise;
             var honk2 = myCar2.HonkNoise;
+            Console.WriteLine($"Number of cars: {CarLot.numberOfCars}");
             Console.WriteLine($"Year: {myCar2.Year}");
             Console.WriteLine($"Make: {myCar2.Make}");
             Console.WriteLine($"Model: {myCar2.Model}");
@@ -61,7 +65,6 @@ namespace CarLotSimulator
             Console.WriteLine($"Horn sound: {honk2}");
             Console.WriteLine($"Can be driven: {myCar2.IsDriveable}");
             Console.WriteLine();
-
             Console.WriteLine();
 
             //Custom Constructor - Custom Cunstructor
@@ -70,14 +73,14 @@ namespace CarLotSimulator
 
             var engineSound3 = myCar3.EngineNoise;
             var honk3 = myCar3.HonkNoise;
+            Console.WriteLine($"Number of cars: {CarLot.numberOfCars}");
             Console.WriteLine($"Year: {myCar3.Year}");
             Console.WriteLine($"Make: {myCar3.Make}");
             Console.WriteLine($"Model: {myCar3.Model}");
             Console.WriteLine($"Engine noise: {engineSound3}");
             Console.WriteLine($"Horn sound: {honk3}");
             Console.WriteLine($"Can be driven: {myCar3.IsDriveable}");
-            Console.WriteLine();
-            Console.WriteLine();
+
             //*************BONUS*************//
 
             // Set the properties utilizing the 3 different ways we learned about, one way for each car
@@ -88,7 +91,8 @@ namespace CarLotSimulator
             //It should have at least one property: a List of cars
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
-
+            Console.WriteLine();
+            Console.WriteLine();
             Console.WriteLine("Workin' at the car lot");
 
             foreach (var car in lot.Cars)

@@ -11,6 +11,7 @@ namespace CarLotSimulator
         //Defaullt or empty constructor
         public Car()
         {
+            CarLot.numberOfCars++;
         }
 
         //Constructor
@@ -28,6 +29,8 @@ namespace CarLotSimulator
             HonkNoise = honkNoise;
             EngineNoise = engineNoise;
             IsDriveable = isDriveable;
+
+            CarLot.numberOfCars++;
         }
 
         //Capital Year comes from here. Lower case year comes from the constructor.
